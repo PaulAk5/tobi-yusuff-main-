@@ -8,64 +8,9 @@ export const NAV_LINKS = [
   { label: "Contact",      page: "contact"      },
 ];
 
-export const ARTICLES = [
-  {
-    id: 1,
-    category: "Business",
-    slug: "the-true-cost-of-doing-business-in-nigeria",
-    title: "The True Cost of Doing Business in Nigeria ",
-    img: "/business-cover.png",
-  },
-  {
-    id: 2,
-    category: "Housing",
-    slug: "housing-and-ownership-in-nigeria",
-    title: "Housing and Homeownership in Nigeria",
-    img: "/home-cover.png",
-  },
-  {
-    id: 3,
-    category: "Infrastructure",
-    slug: "nigeria-infrastructure-and-the-question-of-capital-allocation",
-    title: "Nigeria’s Infrastructure and the Question of Capital Allocation",
-    img: "/electricity-cover.png",
-  },
-  {
-    id: 4,
-    category: "Election",
-    slug: "nigerians-election-cycle-and-early-signals",
-    title: "Nigeria’s Election Cycle and The Early Signals",
-    img: "/election-cover-page.jpg",
-  },
-  {
-    id: 5,
-    category: "Oil",
-    slug: "when-oil-shocks-reach-nigeria",
-    title: "When Oil Shocks Reach Nigeria",
-    img: "/fulcrum article bg image2.png",
-  },
-  {
-    id: 6,
-    category: "Real Estate",
-    slug: "hidden-economics-off-plan",
-    title: "The Hidden Economics of Off-Plan Projects",
-    img: "/hidden-economics.png",
-  },
-  {
-    id: 7,
-    category: "Finance",
-    slug: "beyond-remittances",
-    title: "Beyond Remittances",
-    img: "/beyond.png",
-  },
-  {
-    id: 8,
-    category: "Real Estate",
-    slug: "unlocking-nigeria-real-estate",
-    title: "Unlocking Nigeria's $900 Billion Real Estate: From Dead Capital to Financial Capital",
-    img: "/unlocking.png",
-  },
-];
+// Insight articles now live in content/insights/*.md and are compiled into
+// src/generated/insights.js by scripts/build-insights.mjs. Import them from
+// `../generated/insights` where needed.
 
 export const MEDIA_LOGOS = [
   { name: "The Guardian",  src: "https://tobiyusuff.com/wp-content/uploads/2025/11/png-clipart-logo-nigeria-the-guardian-newspaper-brand-logo-for-news-paper-blue-text.png" },

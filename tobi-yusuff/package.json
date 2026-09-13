@@ -4,14 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run insights:build && vite",
+    "prebuild": "npm run insights:build",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "insights:build": "node scripts/build-insights.mjs",
+    "insights:build:with-drafts": "INCLUDE_DRAFTS=1 node scripts/build-insights.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^15.0.2",
     "prerender-node": "^3.8.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import NewsletterModal from "../components/NewsletterModal";
-import { ARTICLES, MEDIA_LOGOS } from "../data/constants";
+import { MEDIA_LOGOS } from "../data/constants";
+import { INSIGHTS } from "../generated/insights";
 import SEO from "../components/SEO";
 
 // ── HeroContent ─
@@ -561,10 +562,10 @@ export default function HomePage({ navigate }) {
           My thinking is shaped as much by boardrooms and deal rooms as it is by conversations with realtors, investors, founders and policymakers.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-          {ARTICLES.map((a) => (
-            <div key={a.id} className="cursor-pointer group" onClick={() => navigate(`/insights/${a.slug}`)}>
+          {INSIGHTS.map((a) => (
+            <div key={a.slug} className="cursor-pointer group" onClick={() => navigate(`/insights/${a.slug}`)}>
               <div className="overflow-hidden">
-                <img className="w-full aspect-[4/3] object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" src={a.img} alt={a.title} />
+                <img className="w-full aspect-[4/3] object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" src={a.cover} alt={a.coverAlt} loading="lazy" />
               </div>
               <p className="text-[0.9rem] font-serif font-semibold tracking-[0.15em] uppercase text-black mt-4 mb-2">{a.category}</p>
               <h3 className="font-serif text-lg md:text-xl font-normal leading-snug text-ink">{a.title}</h3>

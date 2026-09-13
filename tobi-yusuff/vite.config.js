@@ -3,12 +3,29 @@ import react from "@vitejs/plugin-react";
 
 const isVercel = process.env.VERCEL === "1";
 
+// The prerender step runs the site through headless Chromium so search
+// crawlers get real HTML for the key routes. The list of routes now derives
+// from the generated insights registry so new articles are prerendered
+// automatically without editing this file.
+async function loadInsightRoutes() {
+  try {
+    const mod = await import("./src/generated/insights.js");
+    return (mod.INSIGHT_SLUGS || []).map((slug) => `/insights/${slug}`);
+  } catch {
+    // The registry may not exist yet on a fresh clone; the `prebuild` npm
+    // script generates it. On Vercel we skip prerender entirely.
+    return [];
+  }
+}
+
 export default defineConfig(async () => {
   const rollupPlugins = [];
 
   if (!isVercel) {
     const { default: prerender } = await import("@prerenderer/rollup-plugin");
     const { default: PuppeteerRenderer } = await import("@prerenderer/renderer-puppeteer");
+
+    const insightRoutes = await loadInsightRoutes();
 
     rollupPlugins.push(
       prerender({
@@ -20,11 +37,7 @@ export default defineConfig(async () => {
           "/philanthropy",
           "/insights",
           "/contact",
-          "/insights/hidden-economics-off-plan",
-          "/insights/beyond-remittances",
-          "/insights/unlocking-nigeria-real-estate",
-          "/insights/nigerias-election-cycle-and-early-signals",
-          "/insights/when-oil-shocks-reach-nigeria",
+          ...insightRoutes,
         ],
         renderer: new PuppeteerRenderer({
           headless: true,

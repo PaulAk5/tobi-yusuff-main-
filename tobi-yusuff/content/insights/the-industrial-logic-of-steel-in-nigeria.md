@@ -7,6 +7,8 @@ category: Economics
 tags: [steel, manufacturing, ajaokuta, industrial-policy, infrastructure]
 cover: /the-industrial-logic-of-steel-in-nigeria-cover.jpg
 coverAlt: Isometric illustration of an industrial building surrounded by wind turbines, solar panels and stacked construction materials, representing Nigeria's steel and industrial infrastructure
+hero: /the-industrial-logic-of-steel-in-nigeria-hero.jpg
+heroAlt: Isometric illustration of an industrial building surrounded by wind turbines, solar panels and stacked construction materials, representing Nigeria's steel and industrial infrastructure
 badge: The Fulcrum
 excerpt: "Nigeria has the resources to produce its own steel but still imports the material its growth depends on — a look at Ajaokuta's near-miss and what a coherent steel strategy requires."
 featured: false

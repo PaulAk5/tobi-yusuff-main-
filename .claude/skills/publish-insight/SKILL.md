@@ -50,6 +50,37 @@ Fields you can derive without asking:
   - Do not add "Author: Tobi Yusuff" or a date line inside the body — the template renders those from frontmatter.
 - Set `draft: false` when Tobi wants the article live in the next preview. Set `draft: true` if he wants it staged but hidden from production.
 
+### If Tobi supplied a Word document (.docx)
+
+Use the built-in importer rather than hand-copying the text. It handles inline images correctly, which is exactly the step that's easy to get wrong by hand.
+
+```bash
+cd tobi-yusuff
+node scripts/import-docx.mjs "path/to/article.docx" \
+  --title "Human-facing title" \
+  --category "Strategy" \
+  --date 2026-09-14 \
+  [--slug "custom-slug"] \
+  [--cover "/existing-cover.jpg" --cover-alt "..."] \
+  [--force]
+```
+
+What it does:
+
+- Reads paragraphs and inline images from the docx in document order and writes them to `content/insights/<slug>.md`.
+- Extracts every embedded image to `public/` with the slug as a prefix. When `--cover` is NOT given, the first image is treated as the cover (`<slug>-cover.<ext>`) and every subsequent image becomes `<slug>-figure-N.<ext>`. When `--cover` IS given, all extracted images become figures — the cover stays whatever Tobi supplied.
+- Drops the docx's first heading and any byline/attribution paragraphs from the body (the template renders the title, author, and date from frontmatter — they'd read twice otherwise).
+- Carries the docx image's "Alt Text" field into the markdown when it's set. When it's blank, ASK Tobi for descriptive alt text — every image needs it.
+- Warns about oversized images (>500 KB). Compress those before pushing.
+
+After the importer runs, ALWAYS open the generated `.md` file and:
+
+- Fill in the excerpt if the auto-generated one reads awkwardly.
+- Set the `tags` field (the script leaves it empty).
+- Confirm the `category`.
+- Confirm each image is in the intended position — the script places them in docx order, which is usually right but occasionally wants a nudge.
+- Confirm every `![alt](src)` has real alt text.
+
 ## 4. Handle the cover image
 
 If Tobi supplied an image:

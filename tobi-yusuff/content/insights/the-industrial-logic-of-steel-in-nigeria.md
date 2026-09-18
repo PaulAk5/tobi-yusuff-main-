@@ -39,6 +39,8 @@ The name behind this contradiction is Ajaokuta. What makes it different from mos
 
 So the real reason behind Ajaokuta is not a lack of ambition, and it is also not that Nigeria failed to invest. It is a plant that was built almost to completion, then lost its technical foundation when the Soviet Union fell apart, and was handed to a partner that stripped rather than strengthened it. It has now spent every year since then caught between new foreign partnerships and the unresolved cost of the last one.
 
+![Timeline infographic titled 'The Plant That Never Ran — Ajaokuta Steel Complex, 1979–2026', tracing the plant's contract, near-completion, Soviet collapse, failed Indian concession, arbitration payout, and successive revival plans.](/the-industrial-logic-of-steel-in-nigeria-timeline.jpg)
+
 ## What the Import Bill Actually Costs
 
 The real story here isn't just Ajaokuta's failure. It's what that failure costs everywhere else. When a country imports most of its steel, its construction industry inherits every risk sitting upstream of that decision, from global steel prices and exchange rate swings to shipping costs, port delays, and import duties. None of that shows up as its own line on a building's cost sheet. It just gets added into the price of reinforcement, framing, and roofing, pushing up the cost of housing, infrastructure, and factories all at once, without ever being called "the steel problem."

@@ -5,10 +5,10 @@ date: 2026-04-22
 author: Tobi Yusuff
 category: Strategy
 tags: [politics, elections, capital-flows, investment]
-cover: /election-cover-page.jpg
-coverAlt: "Nigeria's Election Cycle and The Early Signals"
-hero: /election-bg.jpg
-heroAlt: "Nigeria's Election Cycle and The Early Signals"
+cover: /nigerians-election-cycle-and-early-signals-cover.jpg
+coverAlt: "Isometric illustration of a Nigerian polling station — polling booth, ballot box, election billboard and results dashboard, labelled with awareness, engagement, data, integrity and analysis — under the article title."
+hero: /nigerians-election-cycle-and-early-signals-hero.jpg
+heroAlt: "Isometric illustration of a Nigerian polling station on a blue backdrop — polling booth, ballot box, election billboard and results dashboard, annotated with awareness, engagement, data, integrity and analysis."
 badge: Election
 excerpt: "A strategic read on what Nigeria's election cycle signals for real estate, capital flows and investor confidence in the short and medium term."
 featured: false

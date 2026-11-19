@@ -7,6 +7,7 @@
     "dev": "npm run insights:build && vite",
     "prebuild": "npm run insights:build",
     "build": "vite build",
+    "postbuild": "node scripts/build-og-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "insights:build": "node scripts/build-insights.mjs",
